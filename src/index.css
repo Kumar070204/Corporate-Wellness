@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pixel Art Gamification Design System */
+@layer base {
+  :root {
+    /* Dark Gaming Theme */
+    --background: 220 13% 8%;
+    --foreground: 180 100% 90%;
+
+    /* Card System */
+    --card: 220 13% 12%;
+    --card-foreground: 180 100% 90%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 180 100% 90%;
+
+    /* Neon Primary - Cyan */
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 13% 8%;
+    --primary-glow: 180 100% 70%;
+
+    /* Secondary - Dark Purple */
+    --secondary: 260 40% 20%;
+    --secondary-foreground: 180 100% 90%;
+
+    /* Muted - Dark Gaming */
+    --muted: 220 13% 15%;
+    --muted-foreground: 180 20% 60%;
+
+    /* Accent - Neon Green */
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 13% 8%;
+    --accent-glow: 120 100% 70%;
+
+    /* Neon Pink */
+    --neon-pink: 320 100% 60%;
+    --neon-pink-glow: 320 100% 80%;
+
+    /* Neon Yellow */
+    --neon-yellow: 60 100% 60%;
+    --neon-yellow-glow: 60 100% 80%;
+
+    /* Gaming UI */
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 180 100% 90%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.25rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--neon-yellow)));
+    
+    /* Shadows and Glows */
+    --glow-primary: 0 0 20px hsl(var(--primary) / 0.5);
+    --glow-accent: 0 0 20px hsl(var(--accent) / 0.5);
+    --glow-neon-pink: 0 0 20px hsl(var(--neon-pink) / 0.5);
+    --glow-neon-yellow: 0 0 20px hsl(var(--neon-yellow) / 0.5);
+
+    /* Sidebar Gaming Theme */
+    --sidebar-background: 220 13% 10%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 13% 8%;
+    --sidebar-accent: 220 13% 15%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-pixel;
+  }
+}
+
+@layer components {
+  /* Pixel Gaming Components */
+  .pixel-card {
+    @apply bg-card border-2 border-primary/30 rounded-sm p-4;
+    @apply transition-all duration-300 hover:border-primary hover:shadow-[var(--glow-primary)];
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+  }
+
+  .neon-border-cyan {
+    @apply border-2 border-primary;
+    box-shadow: var(--glow-primary), inset 0 0 10px hsl(var(--primary) / 0.1);
+  }
+
+  .neon-border-green {
+    @apply border-2 border-accent;
+    box-shadow: var(--glow-accent), inset 0 0 10px hsl(var(--accent) / 0.1);
+  }
+
+  .neon-border-pink {
+    border: 2px solid hsl(var(--neon-pink));
+    box-shadow: var(--glow-neon-pink), inset 0 0 10px hsl(var(--neon-pink) / 0.1);
+  }
+
+  .neon-border-yellow {
+    border: 2px solid hsl(var(--neon-yellow));
+    box-shadow: var(--glow-neon-yellow), inset 0 0 10px hsl(var(--neon-yellow) / 0.1);
+  }
+
+  .pixel-button {
+    @apply bg-primary text-primary-foreground font-pixel text-sm px-4 py-2 rounded-sm;
+    @apply transition-all duration-200 hover:bg-primary/90;
+    @apply border-2 border-primary-glow;
+    box-shadow: var(--glow-primary);
+  }
+
+  .pixel-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-primary), 0 4px 8px hsl(var(--primary) / 0.3);
+  }
+
+  .arcade-input {
+    @apply bg-input border-2 border-border text-foreground px-3 py-2 rounded-sm;
+    @apply focus:border-primary focus:outline-none focus:ring-0;
+    @apply transition-all duration-200;
+    @apply font-mono;
+  }
+
+  .arcade-input:focus {
+    box-shadow: var(--glow-primary);
+  }
+
+  .rank-card-gold {
+    background: linear-gradient(145deg, hsl(45 100% 25%), hsl(45 100% 35%));
+    border: 2px solid hsl(45 100% 50%);
+    box-shadow: 0 0 20px hsl(45 100% 50% / 0.5);
+  }
+
+  .rank-card-silver {
+    background: linear-gradient(145deg, hsl(0 0% 45%), hsl(0 0% 55%));
+    border: 2px solid hsl(0 0% 70%);
+    box-shadow: 0 0 20px hsl(0 0% 70% / 0.5);
+  }
+
+  .rank-card-bronze {
+    background: linear-gradient(145deg, hsl(30 100% 25%), hsl(30 100% 35%));
+    border: 2px solid hsl(30 100% 50%);
+    box-shadow: 0 0 20px hsl(30 100% 50% / 0.5);
+  }
+
+  .animate-bounce-soft {
+    animation: bounce-soft 2s infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-pixel-float {
+    animation: pixel-float 3s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: 'Press Start 2P', monospace;
+  }
+
+  .font-retro {
+    font-family: 'VT323', monospace;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
+
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { box-shadow: var(--glow-primary); }
+  to { box-shadow: var(--glow-primary), 0 0 30px hsl(var(--primary) / 0.8); }
+}
+
+@keyframes pixel-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
