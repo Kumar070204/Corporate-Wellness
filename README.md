@@ -8,15 +8,6 @@
 ![shadcn/ui](https://img.shields.io/badge/shadcn--ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
 ![Random Forest](https://img.shields.io/badge/Random_Forest-FF6600?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-<br/>
-
-<!-- BADGES ROW 2 — Repo stats (auto-updating) -->
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/corporate-wellness?style=flat-square&color=4ade80)
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/corporate-wellness?style=flat-square&color=16a34a)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/corporate-wellness?style=flat-square&color=4ade80)
-![License](https://img.shields.io/github/license/yourusername/corporate-wellness?style=flat-square&color=16a34a)
-
-<br/>
 
 > **Built for corporate teams** · Gamified survival adventure · AI-powered wellness goals · Indian food nutrition engine · Rivals & leaderboards
 
